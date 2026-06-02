@@ -51,3 +51,15 @@ a:link, a:visited{
     color: #14e133;
     color: #0a771a;
 }
+
+.Badge {
+    width: 200px;
+    height: auto;
+}
+
+.Certifications{
+    display: flex;          /* Activates flexbox layout */
+    flex-direction: row;    /* Aligns items from left to right (Default setting) */
+    gap: 15px;              /* Creates space between the images */
+    justify-content: flex-start; /* Ensures items start from the left side */
+}
