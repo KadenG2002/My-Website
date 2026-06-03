@@ -77,16 +77,19 @@ body{
     grid-template-columns: 1fr,1fr,1fr;
     grid-template-rows: 1fr,1fr,1fr;
     gap: 1 em;
+    padding: 15px;
 }
 
 
 .box{
     background-color: #1c1c1c;
-    padding: 2 em;
+    padding: 1 em;
     border-radius: 12px;
     box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
-    margin: 10px 0;
+    margin: 10px 10px;
     transition: transform 0.2s ease;
+    padding: 15px;
+    gap: 1 em;
 }
 
 
