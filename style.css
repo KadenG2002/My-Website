@@ -13,7 +13,10 @@ h3{color: #ffffff;}
 
 h4{color: #ffffff;}
 
+a{color: #ffffff;}
+
 ul{color: #c4c4c4;}
+
 
 a:link, a:visited{
     color: #00c3ff;
@@ -92,13 +95,12 @@ body{
 /*Boxes */
 
 }
-.box-container{
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr,1fr,1fr;
-    grid-template-rows: 1fr,1fr,1fr;
-    gap: 1 em;
+.box-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    height: fit-content;
 }
 
 
