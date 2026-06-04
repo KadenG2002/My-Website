@@ -19,7 +19,7 @@ function fetchRepos() {
                 repoItem.innerHTML = `
                     <strong>${repo.name}</strong><br>
                     <small>${repo.description || "No description available"}</small><br>
-                    <a href="${repo.html_url}" target="_blank">🔗 View on GitHub</a>
+                    <a href="${repo.html_url}" target="_blank">View on GitHub</a>
                 `;
                 repoList.appendChild(repoItem);
             });

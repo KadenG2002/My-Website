@@ -13,25 +13,26 @@ h3{color: #ffffff;}
 
 h4{color: #ffffff;}
 
-a{color: #ffffff;}
-
 ul{color: #c4c4c4;}
 
+a{color: #ffffff;}
 
-a:link, a:visited{
-    color: #00c3ff;
-    color: #2300d1;
-}
+a:link{text-decoration: none;}
+
+
 
 header{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: #63626261;
-    padding: 20px;
+    padding: 20px, 10px;
     margin: 0px 0;
     top: 0;
+    gap: 15px;
     position: sticky;
-    justify-content: bottom;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
     z-index: 1000;
 
     /*glass effect*/
@@ -42,34 +43,18 @@ header{
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-
-
 body{
     /*background animation*/
-    background: linear-gradient(135deg, #23b5ea, #a8008f);
+    background: linear-gradient(135deg, #000000, #232323);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-
-
-
-    font-family: 'MainFont', monospace;
-    
-        /* Define the Regular weight */
-    @font-face {
-    font-family: 'MainFont';
-    src: local('NerdFont Mono Regular'), 
-        url('/fonts/0xProto/0xProtoNerdFont-Regular.ttf') format('truetype');
+    font-family: "Oxanium", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    }
 
-    /* Define the Bold weight using the exact same font-family name */
-    @font-face {
-    font-family: 'MainFont';
-    src: local('NerdFont Mono Bold'), 
-        url('/fonts/0xProto/0xProtoNerdFont-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: bold;
+    
+
 }
 
 /*Title*/
@@ -93,8 +78,6 @@ body{
 
 
 /*Boxes */
-
-}
 .box-row{
     display: flex;
     flex-wrap: wrap;
@@ -106,17 +89,19 @@ body{
 
 .box{
     display: inline;
-    background-color: #1c1c1c;
-    border-radius: 12px;
-    box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
     margin: 10px 10px;
     transition: transform 0.2s ease;
     padding: 15px;
     
+        /*glass effect*/
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .box:hover {
-    z-index: 2;
     box-shadow: 0px 0px 10px rgba(0, 153, 255, 0.807);
     transform: scale(1.01); 
 
@@ -139,41 +124,36 @@ body{
 }
 
 .card {
-    background-color: #414141;
     width: 300px;
     height: 400px;
     padding: 20px;
     font-size: large;
-    border-radius: 12px;
-    box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
-    margin: 20px 0;
+    margin: 20px 15px;
+    padding: 15px,15px;
     transform-style: preserve-3d;
     transition: transform 0.2s ease;
+    gap: 10px;
     align-items: center;
     display: flex;
     flex-direction: column;
-    z-index: 1;
+    z-index: 2;
+
+        /*glass effect*/
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
 }
 
 .card:hover {
-    z-index: 2;
     box-shadow: 0px 0px 10px rgba(0, 153, 255, 0.807);
     transform: scale(1.2);
+    z-index: 10;
 }
 
-.git-data{
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    margin: 5px;
-    padding: 20px 20px;
-    width: fit-content;
-    height: fit-content;
-
-}
-
-
+/*Background Animation*/
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -186,7 +166,7 @@ body{
     }
 }
 
-
+/*Repo Menu*/
     .repo-list {
         list-style: none;
         padding: 0;
@@ -206,41 +186,31 @@ body{
     }
 
 
-/* Dropdown menu*/
-.dropdown{
-    display: inline-block;
-}
-.dropdown button{
-    background-color: hsl(225, 95%, 46%);
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 15px;
-}
-.dropdown a{
-    display: block;
-    color: black;
-    text-decoration: none;
-    padding: 10px 15px;
-}
-.dropdown .content{
-    display: none;
-    position: absolute;
-    background-color: hsl(0, 0%, 100%);
-    min-width: 100px;
-    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
-}
-.dropdown:hover .content{
-    display: block;
-}
-.dropdown:hover button{
-    background-color: hsl(212, 99%, 40%);
-
+/* buttons*/
+.button-43 {
+  background-image: linear-gradient(-180deg, #ffffff 0%, #989898 100%);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 1rem 1.75rem;
+  text-decoration: none;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.dropdown a:hover{
-    background-color: hsl(204, 100%, 50%);
-    scale: 1.1;
-    box-shadow: 0px 0px 10px hsl(212, 99%, 40%);
+.button-43:hover {
+  background-image: linear-gradient(-180deg, #b6b6b6 0%, #898989 100%);
+}
+
+@media (min-width: 768px) {
+  .button-43 {
+    padding: 1rem 2rem;
+  }
 }
