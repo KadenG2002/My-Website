@@ -31,9 +31,10 @@ header{
     gap: 15px;
     position: sticky;
     justify-content: center;
-    height: fit-content;
+    height: 5%;
     width: 100%;
     z-index: 1000;
+    font-size: 24px;
 
     /*glass effect*/
     backdrop-filter: blur(12px);
