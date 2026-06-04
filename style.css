@@ -38,13 +38,7 @@ header{
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-.title{
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    margin: 5px;
-    padding: 20px 20px;
-}
+
 
 
 body{
@@ -55,11 +49,11 @@ body{
 
 
 
-    font-family: 'NerdFont Mono', monospace;
+    font-family: 'MainFont', monospace;
     
         /* Define the Regular weight */
     @font-face {
-    font-family: 'NerdFont Mono';
+    font-family: 'MainFont';
     src: local('NerdFont Mono Regular'), 
         url('/fonts/0xProto/0xProtoNerdFont-Regular.ttf') format('truetype');
     font-weight: 400;
@@ -68,12 +62,35 @@ body{
 
     /* Define the Bold weight using the exact same font-family name */
     @font-face {
-    font-family: 'NerdFont Mono';
+    font-family: 'MainFont';
     src: local('NerdFont Mono Bold'), 
         url('/fonts/0xProto/0xProtoNerdFont-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: bold;
 }
+
+/*Title*/
+.title-container{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 5px;
+    padding: 20px 20px;
+    width: fit-content;
+    height: fit-content;
+}
+
+
+/*Boxes */
+
 }
 .box-container{
     width: 100vw;
@@ -86,16 +103,31 @@ body{
 
 
 .box{
+    display: inline;
     background-color: #1c1c1c;
     border-radius: 12px;
     box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
     margin: 10px 10px;
     transition: transform 0.2s ease;
     padding: 15px;
+    
 }
 
+.box:hover {
+    z-index: 2;
+    box-shadow: 0px 0px 10px rgba(0, 153, 255, 0.807);
+    transform: scale(1.01); 
 
+}
 
+.badge{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+
+}
+
+/*Cards */
 .card-container{
     display: flex;
     flex-wrap: wrap;
@@ -109,6 +141,7 @@ body{
     width: 300px;
     height: 400px;
     padding: 20px;
+    font-size: large;
     border-radius: 12px;
     box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
     margin: 20px 0;
@@ -119,19 +152,23 @@ body{
     flex-direction: column;
     z-index: 1;
 
-
-}
-.badge{
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-
 }
 
 .card:hover {
     z-index: 2;
     box-shadow: 0px 0px 10px rgba(0, 153, 255, 0.807);
     transform: scale(1.2);
+}
+
+.git-data{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin: 5px;
+    padding: 20px 20px;
+    width: fit-content;
+    height: fit-content;
+
 }
 
 
@@ -146,6 +183,25 @@ body{
         background-position: 0% 50%;
     }
 }
+
+
+    .repo-list {
+        list-style: none;
+        padding: 0;
+    }
+    .repo-card {
+        background: #5c5c5c;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+        text-align: left;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .repo-card a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+    }
 
 
 /* Dropdown menu*/
