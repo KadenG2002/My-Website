@@ -31,7 +31,7 @@ header{
     gap: 15px;
     position: sticky;
     justify-content: center;
-    height: 5%;
+    height: 10%;
     width: 100%;
     z-index: 1000;
     font-size: 24px;
@@ -125,8 +125,8 @@ body{
 }
 
 .card {
-    width: 300px;
-    height: 400px;
+    width: 15%;
+    height: 20%;
     padding: 20px;
     font-size: large;
     margin: 20px 15px;
@@ -173,7 +173,8 @@ body{
         padding: 0;
     }
     .repo-card {
-        background: #5c5c5c;
+        background: #ffffff;
+        color: #000000;
         padding: 15px;
         margin: 10px 0;
         border-radius: 8px;
@@ -189,7 +190,7 @@ body{
 
 /* buttons*/
 .button-43 {
-  background-image: linear-gradient(-180deg, #ffffff 0%, #989898 100%);
+  background: #ffffff;
   border-radius: .5rem;
   box-sizing: border-box;
   color: #000000;
@@ -207,7 +208,7 @@ body{
 }
 
 .button-43:hover {
-  background-image: linear-gradient(-180deg, #b6b6b6 0%, #898989 100%);
+  background: #898989;
 }
 
 @media (min-width: 768px) {
